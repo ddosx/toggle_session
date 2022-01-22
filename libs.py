@@ -39,3 +39,12 @@ def checktempfile():
         status = 'unlock'
     # Возращение статуса
     return status
+
+# Функция для изменения статуса
+def returnstatus(status):
+    if status == 'lock':
+        status = 'unlock'
+    else:
+        status = 'lock'
+    # Возращение статуса
+    return status
