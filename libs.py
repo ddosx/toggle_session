@@ -48,3 +48,13 @@ def returnstatus(status):
         status = 'lock'
     # Возращение статуса
     return status
+
+# Функция для блокировки/разблокировки системы
+def togglescreen(status):
+    lockScreen = 'loginctl lock-session'
+    unlockScreen = 'loginctl unlock-session'
+    if status == 'lock':
+        os.system(lockScreen)
+    elif status == 'unlock':
+        os.system(unlockScreen)
+    return status
