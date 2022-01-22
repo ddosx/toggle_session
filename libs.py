@@ -1,4 +1,3 @@
-from http.client import OK
 import os
 
 # Функция для создания временной папки
