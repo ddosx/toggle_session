@@ -28,3 +28,14 @@ def toggletempfile(status):
             os.system('rm '+path+'/status.txt')
     # Возвращение status
     return status
+
+# Функция для проверки существования временного файла
+def checktempfile():
+    path = '.tmp'
+    # Проверка
+    if os.path.exists(path+'/status.txt'):
+        status = 'lock'
+    else:
+        status = 'unlock'
+    # Возращение статуса
+    return status
