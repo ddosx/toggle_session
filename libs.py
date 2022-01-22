@@ -24,5 +24,5 @@ def toggletempfile(status,path):
         if os.path.exists(path+'/status.txt'):
             # Удаление
             os.system('rm '+path+'/status.txt')
-    # Возвращение True
-    return True
+    # Возвращение status
+    return status
