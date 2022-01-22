@@ -1,7 +1,8 @@
 import os
 
 # Функция для создания временной папки
-def createtmppath(path):
+def createtmppath():
+    path = '.tmp'
     # Проверка на наличие
     if not os.path.isdir(path):
         # если её нет - создаём
@@ -13,11 +14,12 @@ def createtmppath(path):
     return path
 
 # Функция для создания/удаления временного файла
-def toggletempfile(status,path):
+def toggletempfile(status):
+    path = '.tmp'
     # Если нужно создать
     if status == 'lock':
         # Создаём
-        os.system('echo "lock" >' +path+'/status.txt')
+        os.system('echo "lock" > ' +path+'/status.txt')
     # Если нужно удалить
     elif status == 'unlock':
         # Проверка на существование
