@@ -6,9 +6,8 @@ def createtmppath(path):
     if not os.path.isdir(path):
         # если её нет - создаём
         os.system('mkdir '+str(path))
-        # Возвращаем True
-        return True
+        # Возвращаем path
+        return path
     # если она есть
-    # Возвращаем True
-    return True
-
+    # Возвращаем path
+    return path
